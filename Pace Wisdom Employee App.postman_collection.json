@@ -1,0 +1,124 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pace Wisdom Employee App",
+		"_postman_id": "e22c1f14-1424-5308-a868-e8ae88ab515c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add New Employee",
+			"request": {
+				"url": "http://localhost:8085/employees/addEmployee/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Harry\",\r\n    \"lastName\": \"Potter\",\r\n    \"emailId\": \"harry.potter@gmail.com\",\r\n    \"age\": 28,\r\n    \"gender\": \"M\",\r\n    \"address\": \"Alpha City, Chennai, Tamilnadu, India\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View EmployeeDetail",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8085/employees/loadEmployeeDetail?empId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"employees",
+						"loadEmployeeDetail"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View All Employees",
+			"request": {
+				"url": "http://localhost:8085/employees/loadAllEmployees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"url": "http://localhost:8085/employees/updateEmployee/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"firstName\": \"Lilly\",\n    \"lastName\": \"Potter\",\n    \"emailId\": \"lilly.potter@gmail.com\",\n    \"age\": 50,\n    \"gender\": \"F\",\n    \"address\": \"Alpha City, Chennai, Tamilnadu, India\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8085/employees/deleteEmployee?empId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"employees",
+						"deleteEmployee"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
